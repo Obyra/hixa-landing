@@ -1,272 +1,195 @@
 /* ============================================
    HIXA Solutions — Script principal
+   Catálogo real Lenovo + HP
    ============================================ */
 
-// ---- Datos de productos ----
-// imagePath: ruta local esperada. Si no carga, se usa placeholder SVG.
-// LISTADO DE IMÁGENES ESPERADAS:
-// Lenovo:
-//   assets/brands/lenovo/thinkpad-e14-g6.jpg
-//   assets/brands/lenovo/thinkpad-l14-g5.jpg
-//   assets/brands/lenovo/thinkpad-t14s-g5.jpg
-//   assets/brands/lenovo/thinkpad-x1-carbon-g12.jpg
-//   assets/brands/lenovo/ideapad-slim-3.jpg
-//   assets/brands/lenovo/ideapad-slim-5.jpg
-//   assets/brands/lenovo/thinkcentre-neo-50s.jpg
-//   assets/brands/lenovo/thinkcentre-m70q-g4.jpg
-//   assets/brands/lenovo/thinkstation-p3-tower.jpg
-//   assets/brands/lenovo/thinkstation-p3-ultra.jpg
-//   assets/brands/lenovo/thinkvision-t24i-30.jpg
-//   assets/brands/lenovo/thinkvision-p27h-30.jpg
-//   assets/brands/lenovo/thinkserver-sr250-v3.jpg
-//   assets/brands/lenovo/thinkserver-sr630-v3.jpg
-//   assets/brands/lenovo/usb-c-dock-gen2.jpg
-//   assets/brands/lenovo/thinkpad-backpack.jpg
-// Dell:
-//   assets/brands/dell/latitude-3440.jpg
-//   assets/brands/dell/latitude-5540.jpg
-//   assets/brands/dell/latitude-7440.jpg
-//   assets/brands/dell/latitude-9440.jpg
-//   assets/brands/dell/inspiron-15-3520.jpg
-//   assets/brands/dell/inspiron-16-5630.jpg
-//   assets/brands/dell/optiplex-3000-sff.jpg
-//   assets/brands/dell/optiplex-7010-micro.jpg
-//   assets/brands/dell/precision-3580.jpg
-//   assets/brands/dell/precision-5680.jpg
-//   assets/brands/dell/ultrasharp-u2723qe.jpg
-//   assets/brands/dell/monitor-p2422h.jpg
-//   assets/brands/dell/poweredge-t150.jpg
-//   assets/brands/dell/poweredge-r660.jpg
-//   assets/brands/dell/thunderbolt-dock-wd22tb4.jpg
-//   assets/brands/dell/pro-backpack-15.jpg
-
 const products = [
-  // ── LENOVO ──
+  // ── LENOVO NOTEBOOKS ──
   {
-    id: 1, brand: 'lenovo', name: 'Lenovo ThinkPad E14 Gen 6',
-    category: 'Notebooks', price: 849000, badges: ['stock'],
-    shortSpecs: ['Intel Core i5-1345U', '16 GB RAM DDR5', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i5-1345U (12 núcleos)', RAM: '16 GB DDR5 4800 MHz', Almacenamiento: '512 GB SSD NVMe M.2', Pantalla: '14" FHD IPS antirreflejo', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 10 hs', Peso: '1.64 kg' },
-    imagePath: 'assets/brands/lenovo/thinkpad-e14-g6.jpg'
+    id: 1, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15AMN8',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5 7520U', '16 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5 7520U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" Full HD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ip-slim-3-15amn8.png'
   },
   {
-    id: 2, brand: 'lenovo', name: 'Lenovo ThinkPad L14 Gen 5',
-    category: 'Notebooks', price: 920000, badges: ['stock'],
-    shortSpecs: ['Intel Core i5-1345U', '16 GB RAM DDR5', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i5-1345U', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', Pantalla: '14" FHD IPS', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 11 hs', Peso: '1.53 kg' },
-    imagePath: 'assets/brands/lenovo/thinkpad-l14-g5.jpg'
+    id: 2, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10 (i5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ip-slim-3-15irh10.png'
   },
   {
-    id: 3, brand: 'lenovo', name: 'Lenovo ThinkPad T14s Gen 5',
-    category: 'Notebooks', price: 1450000, badges: ['new'],
-    shortSpecs: ['Intel Core Ultra 7 155U', '32 GB RAM LPDDR5x', 'SSD 1 TB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core Ultra 7 155U', RAM: '32 GB LPDDR5x', Almacenamiento: '1 TB SSD NVMe', Pantalla: '14" 2.8K OLED', Gráficos: 'Intel Arc', SO: 'Windows 11 Pro', Batería: 'Hasta 13 hs', Peso: '1.24 kg' },
-    imagePath: 'assets/brands/lenovo/thinkpad-t14s-g5.jpg'
+    id: 3, brand: 'lenovo', name: 'Lenovo IdeaPad 1 15IJL7',
+    category: 'Notebooks', badges: ['stock', 'offer'],
+    shortSpecs: ['Intel Celeron N4500', '4 GB RAM', '128 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Celeron® N4500', RAM: '4 GB', Almacenamiento: '128 GB SSD', Pantalla: '15.6" HD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-1-15ijl7.png'
   },
   {
-    id: 4, brand: 'lenovo', name: 'Lenovo ThinkPad X1 Carbon Gen 12',
-    category: 'Notebooks', price: 2100000, badges: ['new', 'stock'],
-    shortSpecs: ['Intel Core Ultra 7 165U', '32 GB LPDDR5x', 'SSD 1 TB Gen4'],
-    fullSpecs: { Procesador: 'Intel Core Ultra 7 165U', RAM: '32 GB LPDDR5x', Almacenamiento: '1 TB SSD PCIe Gen4', Pantalla: '14" 2.8K OLED táctil', Gráficos: 'Intel Arc', SO: 'Windows 11 Pro', Batería: 'Hasta 15 hs', Peso: '1.08 kg' },
-    imagePath: 'assets/brands/lenovo/thinkpad-x1-carbon-g12.jpg'
+    id: 4, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IAH8 Táctil',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-12450H', '8 GB RAM', '15.6" FHD Táctil'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-12450H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" FHD Táctil', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15iah8-tactil.png'
   },
   {
-    id: 5, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15"',
-    category: 'Notebooks', price: 580000, badges: ['offer'],
-    shortSpecs: ['AMD Ryzen 5 7520U', '8 GB RAM DDR5', 'SSD 256 GB NVMe'],
-    fullSpecs: { Procesador: 'AMD Ryzen 5 7520U', RAM: '8 GB DDR5', Almacenamiento: '256 GB SSD NVMe', Pantalla: '15.6" FHD IPS', Gráficos: 'AMD Radeon', SO: 'Windows 11 Home', Batería: 'Hasta 8 hs', Peso: '1.63 kg' },
-    imagePath: 'assets/brands/lenovo/ideapad-slim-3.jpg'
+    id: 5, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10 Touch',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '15.3" WUXGA Touch'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA Touch', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15irh10-touch.png'
   },
   {
-    id: 6, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 5 14"',
-    category: 'Notebooks', price: 750000, badges: ['stock'],
-    shortSpecs: ['Intel Core i7-1355U', '16 GB RAM DDR5', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i7-1355U', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', Pantalla: '14" 2.2K IPS', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Home', Batería: 'Hasta 12 hs', Peso: '1.46 kg' },
-    imagePath: 'assets/brands/lenovo/ideapad-slim-5.jpg'
+    id: 6, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '15.3" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15irh10.png'
   },
   {
-    id: 7, brand: 'lenovo', name: 'Lenovo ThinkCentre Neo 50s Gen 5',
-    category: 'Desktops', price: 680000, badges: ['stock'],
-    shortSpecs: ['Intel Core i5-1440P', '16 GB DDR5', 'SSD 512 GB'],
-    fullSpecs: { Procesador: 'Intel Core i5-1440P', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', 'Factor de forma': 'SFF (Small Form Factor)', Gráficos: 'Intel UHD', SO: 'Windows 11 Pro', Puertos: '8x USB, HDMI, DP', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkcentre-neo-50s.jpg'
+    id: 7, brand: 'lenovo', name: 'Lenovo LOQ 15IAX9E (Gaming)',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core i5-12450HX', 'NVIDIA RTX 3050 6 GB', '15.6" FHD 144 Hz'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-12450HX', RAM: '8 GB', Almacenamiento: '512 GB SSD', GPU: 'NVIDIA® GeForce RTX™ 3050 6 GB GDDR6', Pantalla: '15.6" Full HD 144 Hz', 'Sistema operativo': 'Free DOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-loq-15iax9e-rtx3050.png'
   },
   {
-    id: 8, brand: 'lenovo', name: 'Lenovo ThinkCentre M70q Gen 4',
-    category: 'Desktops', price: 820000, badges: ['new'],
-    shortSpecs: ['Intel Core i7-1360P', '16 GB DDR5', 'SSD 512 GB'],
-    fullSpecs: { Procesador: 'Intel Core i7-1360P', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', 'Factor de forma': 'Tiny (Mini PC)', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Puertos: '10x USB, HDMI, DP', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkcentre-m70q-g4.jpg'
+    id: 8, brand: 'lenovo', name: 'Lenovo T14 (AMD Ryzen 5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-7540U', '16 GB RAM', 'Windows 11 Pro'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-7540U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" FHD', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-t14-ryzen5-7540u.png'
   },
   {
-    id: 9, brand: 'lenovo', name: 'Lenovo ThinkStation P3 Tower',
-    category: 'Workstations', price: 2800000, badges: ['stock'],
-    shortSpecs: ['Intel Core i7-13700', 'NVIDIA RTX A2000', '32 GB DDR5 ECC'],
-    fullSpecs: { Procesador: 'Intel Core i7-13700 (16 núcleos)', RAM: '32 GB DDR5 ECC', Almacenamiento: '1 TB SSD NVMe', GPU: 'NVIDIA RTX A2000 12 GB', SO: 'Windows 11 Pro for Workstations', 'Factor de forma': 'Tower', Certificaciones: 'ISV Certified', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkstation-p3-tower.jpg'
+    id: 9, brand: 'lenovo', name: 'Lenovo ThinkBook 14 G8',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core 7 240H', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 7 240H', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-14-g8-core7.png'
   },
   {
-    id: 10, brand: 'lenovo', name: 'Lenovo ThinkStation P3 Ultra',
-    category: 'Workstations', price: 3200000, badges: ['new'],
-    shortSpecs: ['Intel Core i9-13900', 'NVIDIA RTX A4000', '64 GB DDR5 ECC'],
-    fullSpecs: { Procesador: 'Intel Core i9-13900 (24 núcleos)', RAM: '64 GB DDR5 ECC', Almacenamiento: '2 TB SSD NVMe', GPU: 'NVIDIA RTX A4000 16 GB', SO: 'Windows 11 Pro for Workstations', 'Factor de forma': 'Ultra SFF', Certificaciones: 'ISV Certified', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkstation-p3-ultra.jpg'
+    id: 10, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 IRL',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core 7 240H', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 7 240H', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-irl-core7.png'
   },
   {
-    id: 11, brand: 'lenovo', name: 'Lenovo ThinkVision T24i-30',
-    category: 'Monitores', price: 290000, badges: ['stock'],
-    shortSpecs: ['23.8" FHD IPS', 'USB-C 75W Power Delivery', '99% sRGB'],
-    fullSpecs: { Tamaño: '23.8"', Resolución: '1920 x 1080 (FHD)', Panel: 'IPS', Conectividad: 'HDMI, DP, USB-C (75W PD)', 'Tiempo de respuesta': '4 ms', Soporte: 'Pivot, tilt, swivel, height', Certificaciones: 'TÜV Eye Comfort', Garantía: '3 años' },
-    imagePath: 'assets/brands/lenovo/thinkvision-t24i-30.jpg'
+    id: 11, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 (Win 11 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core 5 210H', '8 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 5 210H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-core5-w11pro.png'
   },
   {
-    id: 12, brand: 'lenovo', name: 'Lenovo ThinkVision P27h-30',
-    category: 'Monitores', price: 520000, badges: ['new'],
-    shortSpecs: ['27" QHD IPS', 'USB-C 100W PD', 'Daisy Chain'],
-    fullSpecs: { Tamaño: '27"', Resolución: '2560 x 1440 (QHD)', Panel: 'IPS', Conectividad: 'HDMI, DP, USB-C (100W PD), RJ45', 'Funciones': 'Daisy Chain, KVM integrado', Soporte: 'Ajustable en 4 ejes', Certificaciones: 'TÜV, TCO', Garantía: '3 años' },
-    imagePath: 'assets/brands/lenovo/thinkvision-p27h-30.jpg'
+    id: 12, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 (FreeDOS)',
+    category: 'Notebooks', badges: ['stock', 'offer'],
+    shortSpecs: ['Intel Core 5 210H', '8 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ 5 210H', RAM: '8 GB', Almacenamiento: '512 GB SSD', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-core5-freedos.png'
   },
   {
-    id: 13, brand: 'lenovo', name: 'Lenovo ThinkSystem SR250 V3',
-    category: 'Servidores', price: 3500000, badges: ['stock'],
-    shortSpecs: ['Intel Xeon E-2400', 'Hasta 128 GB ECC', 'Rack 1U'],
-    fullSpecs: { Procesador: 'Intel Xeon E-2400 Series', RAM: 'Hasta 128 GB DDR5 ECC', Almacenamiento: 'Hasta 4 x 3.5" hot-swap', 'Factor de forma': 'Rack 1U', Red: '2x 1GbE integrado', Gestión: 'Lenovo XClarity Controller', Fuente: 'Redundante 500W', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkserver-sr250-v3.jpg'
+    id: 13, brand: 'lenovo', name: 'Lenovo ThinkPad T14 G6 (Ultra 7)',
+    category: 'Notebooks', badges: ['new', 'stock'],
+    shortSpecs: ['Intel Core Ultra 7 255U', '16 GB RAM', '3 años de garantía'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 7 255U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11 Pro', Garantía: '3 años' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-g6-ultra7.png'
   },
   {
-    id: 14, brand: 'lenovo', name: 'Lenovo ThinkSystem SR630 V3',
-    category: 'Servidores', price: 7200000, badges: ['stock'],
-    shortSpecs: ['2x Intel Xeon Scalable', 'Hasta 2 TB ECC', 'Rack 1U'],
-    fullSpecs: { Procesador: '2x Intel Xeon Scalable 4ta Gen', RAM: 'Hasta 2 TB DDR5 ECC (32 DIMM)', Almacenamiento: 'Hasta 10 x 2.5" NVMe/SAS/SATA', 'Factor de forma': 'Rack 1U', Red: 'OCP 3.0, hasta 25GbE', GPU: 'Hasta 2 GPU', Gestión: 'XClarity Controller Enterprise', Garantía: '3 años on-site' },
-    imagePath: 'assets/brands/lenovo/thinkserver-sr630-v3.jpg'
+    id: 14, brand: 'lenovo', name: 'Lenovo ThinkPad T16 G4 (Ultra 5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core Ultra 5 225U', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 5 225U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t16-g4-ultra5.png'
   },
   {
-    id: 15, brand: 'lenovo', name: 'Lenovo USB-C Dock Gen 2',
-    category: 'Accesorios', price: 165000, badges: ['stock'],
-    shortSpecs: ['USB-C 100W passthrough', '3x pantallas 4K', '10 puertos total'],
-    fullSpecs: { Tipo: 'Docking Station USB-C', Alimentación: 'USB-C 100W Power Delivery', Salidas: 'HDMI 2.0, 2x DP 1.4', USB: '3x USB-A 3.1, 2x USB-C', Red: 'RJ45 Gigabit', Audio: 'Combo jack', Compatibilidad: 'Windows / macOS / Chrome OS', Garantía: '1 año' },
-    imagePath: 'assets/brands/lenovo/usb-c-dock-gen2.jpg'
+    id: 15, brand: 'lenovo', name: 'Lenovo ThinkPad T16 G4 (Ultra 7)',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core Ultra 7 255U', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 7 255U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t16-g4-ultra7.png'
   },
   {
-    id: 16, brand: 'lenovo', name: 'Lenovo ThinkPad Professional Backpack',
-    category: 'Accesorios', price: 65000, badges: ['stock', 'offer'],
-    shortSpecs: ['Hasta 16"', 'Resistente al agua', 'Compartimento acolchado'],
-    fullSpecs: { Tipo: 'Mochila profesional', 'Capacidad notebook': 'Hasta 16"', Material: 'Poliéster reciclado, resistente al agua', Compartimentos: 'Notebook, tablet, organizador', Peso: '0.8 kg', Color: 'Negro', Certificaciones: 'EPEAT', Garantía: '1 año' },
-    imagePath: 'assets/brands/lenovo/thinkpad-backpack.jpg'
+    id: 16, brand: 'lenovo', name: 'Lenovo ThinkPad T14 (Ryzen 5, Win 11)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-6650U', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-6650U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-ryzen5-6650u.png'
+  },
+  {
+    id: 17, brand: 'lenovo', name: 'Lenovo ThinkPad T14 (Ryzen 5, Win 11 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-6650U', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-6650U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-ryzen5-6650u-pro.png'
+  },
+  {
+    id: 18, brand: 'lenovo', name: 'Lenovo ThinkPad X13 (Ryzen 7 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 7 Pro 5850U', '16 GB RAM', '3 años de garantía'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 7 Pro 5850U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '13.3" FHD', 'Sistema operativo': 'Windows 11 Pro', Garantía: '3 años' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-x13-ryzen7-pro.png'
+  },
+  {
+    id: 19, brand: 'lenovo', name: 'Lenovo V15 G4 (i7)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i7-13620H', '8 GB RAM', '15.6" Full HD'],
+    fullSpecs: { Procesador: 'Intel® Core™ i7-13620H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" Full HD', 'Sistema operativo': 'Free DOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-v15-g4-i7.png'
+  },
+  {
+    id: 20, brand: 'lenovo', name: 'Lenovo Yoga Slim 7',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core Ultra 5 125H', '16 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 5 125H', RAM: '16 GB', Almacenamiento: '512 GB SSD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-yoga-slim-7-ultra5.png'
   },
 
-  // ── DELL ──
+  // ── LENOVO SERVIDORES ──
   {
-    id: 17, brand: 'dell', name: 'Dell Latitude 3440',
-    category: 'Notebooks', price: 780000, badges: ['stock'],
-    shortSpecs: ['Intel Core i5-1335U', '16 GB RAM DDR4', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i5-1335U', RAM: '16 GB DDR4 3200 MHz', Almacenamiento: '512 GB SSD NVMe M.2', Pantalla: '14" FHD IPS antirreflejo', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 9 hs', Peso: '1.56 kg' },
-    imagePath: 'assets/brands/dell/latitude-3440.jpg'
+    id: 21, brand: 'lenovo', name: 'Lenovo ThinkSystem SR630 V4',
+    category: 'Servidores', badges: ['new'],
+    shortSpecs: ['Intel Xeon 6505P 12C 2.2 GHz', '32 GB TruDDR5 6400 MHz', 'RAID 940-8i 4 GB Flash'],
+    fullSpecs: { Procesador: 'Intel Xeon 6505P 12C 150W 2.2 GHz', RAM: 'ThinkSystem 32 GB TruDDR5 6400 MHz', Almacenamiento: 'ThinkSystem RAID 940-8i 4 GB Flash PCIe Gen4', 'Factor de forma': 'Rack 1U' },
+    imagePath: 'assets/brands/lenovo/lenovo-sr630-v4.png'
+  },
+
+  // ── HP SERVIDORES ──
+  {
+    id: 22, brand: 'hp', name: 'HP ProLiant ML110 G11 (2x4TB HDD)',
+    category: 'Servidores', badges: ['stock'],
+    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x4 TB HDD'],
+    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 4 TB HDD', Fuente: 'HP 500W Flex Slot Platinum', 'Factor de forma': 'Torre' },
+    imagePath: 'assets/brands/hp/hp-proliant-ml110-g11-2x4tb-hdd.png'
   },
   {
-    id: 18, brand: 'dell', name: 'Dell Latitude 5540',
-    category: 'Notebooks', price: 1100000, badges: ['stock'],
-    shortSpecs: ['Intel Core i7-1365U', '16 GB DDR5', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i7-1365U', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', Pantalla: '15.6" FHD IPS', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 10 hs', Peso: '1.66 kg' },
-    imagePath: 'assets/brands/dell/latitude-5540.jpg'
+    id: 23, brand: 'hp', name: 'HP ProLiant DL20 G11',
+    category: 'Servidores', badges: ['stock'],
+    shortSpecs: ['Intel Xeon E-2434', '32 GB RAM', '2x480 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Xeon® E-2434', RAM: '32 GB', Almacenamiento: '2 x 480 GB SSD', 'Factor de forma': 'Rack 1U' },
+    imagePath: 'assets/brands/hp/hp-dl20-g11.png'
   },
   {
-    id: 19, brand: 'dell', name: 'Dell Latitude 7440',
-    category: 'Notebooks', price: 1650000, badges: ['new', 'stock'],
-    shortSpecs: ['Intel Core i7-1365U', '32 GB LPDDR5', 'SSD 1 TB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i7-1365U', RAM: '32 GB LPDDR5', Almacenamiento: '1 TB SSD NVMe', Pantalla: '14" FHD+ IPS táctil', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 12 hs', Peso: '1.37 kg' },
-    imagePath: 'assets/brands/dell/latitude-7440.jpg'
+    id: 24, brand: 'hp', name: 'HP ProLiant DL320 G11',
+    category: 'Servidores', badges: ['stock'],
+    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x960 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 960 GB SSD', Fuente: 'HP 800W Flex Slot Platinum', 'Factor de forma': 'Rack 1U' },
+    imagePath: 'assets/brands/hp/hp-dl320-g11.png'
   },
   {
-    id: 20, brand: 'dell', name: 'Dell Latitude 9440 2-in-1',
-    category: 'Notebooks', price: 2350000, badges: ['new'],
-    shortSpecs: ['Intel Core i7-1370P', '32 GB LPDDR5x', 'SSD 1 TB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i7-1370P', RAM: '32 GB LPDDR5x', Almacenamiento: '1 TB SSD NVMe', Pantalla: '14" QHD+ IPS táctil, 2-in-1', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Pro', Batería: 'Hasta 13 hs', Peso: '1.45 kg', Extra: 'Haptic touchpad, collaboration touch bar' },
-    imagePath: 'assets/brands/dell/latitude-9440.jpg'
+    id: 25, brand: 'hp', name: 'HP ProLiant DL360 G11',
+    category: 'Servidores', badges: ['new', 'stock'],
+    shortSpecs: ['Intel Xeon Silver 4514Y', '64 GB RAM (2x32GB)', '2x480 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Xeon® Silver 4514Y', RAM: '64 GB (2 x 32 GB)', Almacenamiento: '2 x 480 GB SSD', Fuente: '2 x 800W (redundante)', 'Factor de forma': 'Rack 1U' },
+    imagePath: 'assets/brands/hp/hp-proliant-dl360-g11.png'
   },
   {
-    id: 21, brand: 'dell', name: 'Dell Inspiron 15 3520',
-    category: 'Notebooks', price: 520000, badges: ['offer'],
-    shortSpecs: ['Intel Core i5-1235U', '8 GB DDR4', 'SSD 256 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i5-1235U', RAM: '8 GB DDR4', Almacenamiento: '256 GB SSD NVMe', Pantalla: '15.6" FHD', Gráficos: 'Intel UHD', SO: 'Windows 11 Home', Batería: 'Hasta 7 hs', Peso: '1.65 kg' },
-    imagePath: 'assets/brands/dell/inspiron-15-3520.jpg'
-  },
-  {
-    id: 22, brand: 'dell', name: 'Dell Inspiron 16 5630',
-    category: 'Notebooks', price: 850000, badges: ['stock'],
-    shortSpecs: ['Intel Core i7-1360P', '16 GB DDR5', 'SSD 512 GB NVMe'],
-    fullSpecs: { Procesador: 'Intel Core i7-1360P', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', Pantalla: '16" FHD+ IPS', Gráficos: 'Intel Iris Xe', SO: 'Windows 11 Home', Batería: 'Hasta 9 hs', Peso: '1.86 kg' },
-    imagePath: 'assets/brands/dell/inspiron-16-5630.jpg'
-  },
-  {
-    id: 23, brand: 'dell', name: 'Dell OptiPlex 3000 SFF',
-    category: 'Desktops', price: 620000, badges: ['stock'],
-    shortSpecs: ['Intel Core i5-12500', '16 GB DDR4', 'SSD 512 GB'],
-    fullSpecs: { Procesador: 'Intel Core i5-12500', RAM: '16 GB DDR4', Almacenamiento: '512 GB SSD NVMe', 'Factor de forma': 'Small Form Factor', Gráficos: 'Intel UHD 770', SO: 'Windows 11 Pro', Puertos: '8x USB, HDMI, DP', Garantía: '3 años ProSupport' },
-    imagePath: 'assets/brands/dell/optiplex-3000-sff.jpg'
-  },
-  {
-    id: 24, brand: 'dell', name: 'Dell OptiPlex 7010 Micro',
-    category: 'Desktops', price: 890000, badges: ['new', 'stock'],
-    shortSpecs: ['Intel Core i7-13700T', '16 GB DDR5', 'SSD 512 GB'],
-    fullSpecs: { Procesador: 'Intel Core i7-13700T', RAM: '16 GB DDR5', Almacenamiento: '512 GB SSD NVMe', 'Factor de forma': 'Micro (1.12L)', Gráficos: 'Intel UHD 770', SO: 'Windows 11 Pro', Puertos: '6x USB, HDMI, DP', Garantía: '3 años ProSupport' },
-    imagePath: 'assets/brands/dell/optiplex-7010-micro.jpg'
-  },
-  {
-    id: 25, brand: 'dell', name: 'Dell Precision 3580',
-    category: 'Workstations', price: 2200000, badges: ['stock'],
-    shortSpecs: ['Intel Core i7-1370P', 'NVIDIA RTX A500', '32 GB DDR5'],
-    fullSpecs: { Procesador: 'Intel Core i7-1370P', RAM: '32 GB DDR5', Almacenamiento: '1 TB SSD NVMe', GPU: 'NVIDIA RTX A500 4 GB', Pantalla: '15.6" FHD IPS', SO: 'Windows 11 Pro for Workstations', Certificaciones: 'ISV Certified', Garantía: '3 años ProSupport' },
-    imagePath: 'assets/brands/dell/precision-3580.jpg'
-  },
-  {
-    id: 26, brand: 'dell', name: 'Dell Precision 5680',
-    category: 'Workstations', price: 4500000, badges: ['new'],
-    shortSpecs: ['Intel Core i9-13900H', 'NVIDIA RTX 3500 Ada', '64 GB DDR5'],
-    fullSpecs: { Procesador: 'Intel Core i9-13900H', RAM: '64 GB DDR5', Almacenamiento: '2 TB SSD NVMe', GPU: 'NVIDIA RTX 3500 Ada 12 GB', Pantalla: '16" OLED 3.8K táctil', SO: 'Windows 11 Pro for Workstations', Certificaciones: 'ISV Certified', Garantía: '3 años ProSupport Plus' },
-    imagePath: 'assets/brands/dell/precision-5680.jpg'
-  },
-  {
-    id: 27, brand: 'dell', name: 'Dell UltraSharp U2723QE',
-    category: 'Monitores', price: 610000, badges: ['stock'],
-    shortSpecs: ['27" 4K IPS Black', 'USB-C 90W PD', '98% DCI-P3'],
-    fullSpecs: { Tamaño: '27"', Resolución: '3840 x 2160 (4K)', Panel: 'IPS Black', Conectividad: 'HDMI, DP, USB-C (90W PD), RJ45', Color: '98% DCI-P3, Delta E < 2', Funciones: 'KVM, PbP/PiP, Daisy Chain', Soporte: 'Ajustable 4 ejes, VESA', Garantía: '3 años Premium Panel Exchange' },
-    imagePath: 'assets/brands/dell/ultrasharp-u2723qe.jpg'
-  },
-  {
-    id: 28, brand: 'dell', name: 'Dell Monitor P2422H',
-    category: 'Monitores', price: 245000, badges: ['stock', 'offer'],
-    shortSpecs: ['24" FHD IPS', 'HDMI + DP + VGA', 'TÜV Certified'],
-    fullSpecs: { Tamaño: '23.8"', Resolución: '1920 x 1080 (FHD)', Panel: 'IPS', Conectividad: 'HDMI, DP, VGA, 4x USB-A', 'Tiempo de respuesta': '5 ms', Soporte: 'Pivot, tilt, swivel, height', Certificaciones: 'TÜV, TCO', Garantía: '3 años' },
-    imagePath: 'assets/brands/dell/monitor-p2422h.jpg'
-  },
-  {
-    id: 29, brand: 'dell', name: 'Dell PowerEdge T150',
-    category: 'Servidores', price: 2800000, badges: ['stock'],
-    shortSpecs: ['Intel Xeon E-2400', 'Hasta 128 GB ECC', 'Torre compacta'],
-    fullSpecs: { Procesador: 'Intel Xeon E-2400 Series', RAM: 'Hasta 128 GB DDR5 ECC', Almacenamiento: 'Hasta 4 x 3.5" cableados', 'Factor de forma': 'Tower', Red: '2x 1GbE', Gestión: 'iDRAC9 Express', Fuente: '300W', Garantía: '3 años ProSupport' },
-    imagePath: 'assets/brands/dell/poweredge-t150.jpg'
-  },
-  {
-    id: 30, brand: 'dell', name: 'Dell PowerEdge R660',
-    category: 'Servidores', price: 8500000, badges: ['new', 'stock'],
-    shortSpecs: ['2x Intel Xeon Scalable 5ta', 'Hasta 4 TB ECC', 'Rack 1U'],
-    fullSpecs: { Procesador: '2x Intel Xeon Scalable 5ta Gen', RAM: 'Hasta 4 TB DDR5 ECC (32 DIMM)', Almacenamiento: 'Hasta 10 x 2.5" NVMe/SAS/SATA', 'Factor de forma': 'Rack 1U', Red: 'OCP 3.0 hasta 100GbE', GPU: 'Hasta 2 GPU 300W', Gestión: 'iDRAC9 Enterprise', Garantía: '3 años ProSupport Plus' },
-    imagePath: 'assets/brands/dell/poweredge-r660.jpg'
-  },
-  {
-    id: 31, brand: 'dell', name: 'Dell Thunderbolt Dock WD22TB4',
-    category: 'Accesorios', price: 195000, badges: ['stock'],
-    shortSpecs: ['Thunderbolt 4', '130W Power Delivery', 'Dual 4K @ 60 Hz'],
-    fullSpecs: { Tipo: 'Docking Station Thunderbolt 4', Alimentación: '130W Power Delivery', Salidas: '2x DP 1.4, HDMI 2.0', USB: '3x USB-A 3.2, 1x USB-C', Red: 'RJ45 Gigabit', Audio: 'Combo jack', Resolución: 'Dual 4K @ 60 Hz o 1x 8K', Garantía: '3 años' },
-    imagePath: 'assets/brands/dell/thunderbolt-dock-wd22tb4.jpg'
-  },
-  {
-    id: 32, brand: 'dell', name: 'Dell Pro Backpack 15',
-    category: 'Accesorios', price: 55000, badges: ['stock'],
-    shortSpecs: ['Hasta 15.6"', 'Reflectante', 'Compartimiento EVA'],
-    fullSpecs: { Tipo: 'Mochila profesional', 'Capacidad notebook': 'Hasta 15.6"', Material: 'Poliéster resistente al agua', Compartimentos: 'Notebook EVA, tablet, organizador', Peso: '0.74 kg', Color: 'Negro', Extras: 'Cinta reflectante, asa trolley', Garantía: '1 año' },
-    imagePath: 'assets/brands/dell/pro-backpack-15.jpg'
+    id: 26, brand: 'hp', name: 'HP ProLiant ML110 G11 (2x960 SSD)',
+    category: 'Servidores', badges: ['stock'],
+    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x960 GB SATA SSD'],
+    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 960 GB HP SATA 6G SSD', 'Factor de forma': 'Torre' },
+    imagePath: 'assets/brands/hp/hp-proliant-ml110-g11-2x960-ssd.png'
   }
 ];
 
@@ -288,11 +211,6 @@ function placeholderSVG(name) {
   `)}`;
 }
 
-// ---- Formateo de precio ----
-function formatPrice(n) {
-  return '$' + n.toLocaleString('es-AR');
-}
-
 // ---- Badge HTML ----
 function badgeHTML(badge) {
   const labels = { stock: 'En stock', new: 'Nuevo', offer: 'Oferta' };
@@ -301,7 +219,8 @@ function badgeHTML(badge) {
 
 // ---- Render de tarjeta ----
 function cardHTML(p) {
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${p.brand === 'lenovo' ? 'Lenovo' : 'Dell'})`);
+  const brandLabel = p.brand === 'lenovo' ? 'Lenovo' : 'HP';
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
   return `
     <article class="product-card" data-id="${p.id}">
       <div class="product-card__img">
@@ -314,7 +233,7 @@ function cardHTML(p) {
         <ul class="product-card__specs">
           ${p.shortSpecs.map(s => `<li>${s}</li>`).join('')}
         </ul>
-        <div class="product-card__price"><span>desde </span>${formatPrice(p.price)}</div>
+        <div class="product-card__price"><span>Precio </span>a consultar</div>
         <div class="product-card__actions">
           <a href="https://wa.me/5491100000000?text=${waMsg}" target="_blank" rel="noopener" class="btn btn--whatsapp btn--sm">Consultar</a>
           <button class="btn btn--outline btn--sm" onclick="openModal(${p.id})">Detalles</button>
@@ -327,23 +246,21 @@ function cardHTML(p) {
 function renderProducts() {
   const search = document.getElementById('filterSearch').value.toLowerCase();
   const category = document.getElementById('filterCategory').value;
-  const priceMin = Number(document.getElementById('filterPriceMin').value) || 0;
-  const priceMax = Number(document.getElementById('filterPriceMax').value) || Infinity;
   const sort = document.getElementById('filterSort').value;
 
+  // Si el usuario filtra por "Servidores" mostramos todos (Lenovo + HP) ignorando la marca
+  const effectiveCategory = category !== 'all' ? category : currentCategory;
+  const showAllBrands = effectiveCategory === 'Servidores';
+
   let filtered = products.filter(p => {
-    if (p.brand !== currentBrand) return false;
+    if (!showAllBrands && p.brand !== currentBrand) return false;
     if (currentCategory !== 'all' && p.category !== currentCategory) return false;
     if (category !== 'all' && p.category !== category) return false;
     if (search && !p.name.toLowerCase().includes(search) && !p.shortSpecs.some(s => s.toLowerCase().includes(search))) return false;
-    if (p.price < priceMin) return false;
-    if (p.price > priceMax) return false;
     return true;
   });
 
-  // Ordenar
-  if (sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
-  else if (sort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+  if (sort === 'name-asc') filtered.sort((a, b) => a.name.localeCompare(b.name));
   else if (sort === 'newest') filtered.sort((a, b) => b.id - a.id);
 
   const grid = document.getElementById('productsGrid');
@@ -355,25 +272,40 @@ function renderProducts() {
   count.textContent = `${filtered.length} producto${filtered.length !== 1 ? 's' : ''}`;
 }
 
+// ---- Cambia el hero cuando se filtra por "Servidores" (que muestra todas las marcas) ----
+function updateBrandHeroForCategory() {
+  const titleEl = document.getElementById('brandTitle');
+  const subEl = document.getElementById('brandSubtitle');
+  if (currentCategory === 'Servidores') {
+    titleEl.textContent = 'Servidores en HIXA';
+    subEl.textContent = 'Servidores HP ProLiant y Lenovo ThinkSystem para empresas, con garantía oficial.';
+  } else {
+    const brandName = currentBrand === 'lenovo' ? 'Lenovo' : 'HP';
+    const subtitle = currentBrand === 'lenovo'
+      ? 'Notebooks ThinkPad, ThinkBook, IdeaPad, Yoga y servidores ThinkSystem con garantía oficial.'
+      : 'Servidores HP ProLiant para empresas: alto rendimiento, confiabilidad y soporte oficial.';
+    titleEl.textContent = `${brandName} en HIXA`;
+    subEl.textContent = subtitle;
+  }
+}
+
 // ---- Selección de marca ----
 function selectBrand(brand) {
   currentBrand = brand;
   currentCategory = 'all';
 
-  // Tabs
   document.querySelectorAll('.brand-tab').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.brand === brand);
   });
 
-  // Hero
-  const brandName = brand === 'lenovo' ? 'Lenovo' : 'Dell';
+  const brandName = brand === 'lenovo' ? 'Lenovo' : 'HP';
+  const subtitle = brand === 'lenovo'
+    ? 'Notebooks ThinkPad, ThinkBook, IdeaPad, Yoga y servidores ThinkSystem con garantía oficial.'
+    : 'Servidores HP ProLiant para empresas: alto rendimiento, confiabilidad y soporte oficial.';
   document.getElementById('brandTitle').textContent = `${brandName} en HIXA`;
-  document.getElementById('brandSubtitle').textContent = 'Equipamiento profesional con garantía y soporte técnico directo.';
+  document.getElementById('brandSubtitle').textContent = subtitle;
 
-  // Reset chips
   document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
-
-  // Reset filter select
   document.getElementById('filterCategory').value = 'all';
 
   renderProducts();
@@ -384,7 +316,8 @@ function openModal(id) {
   const p = products.find(pr => pr.id === id);
   if (!p) return;
 
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${p.brand === 'lenovo' ? 'Lenovo' : 'Dell'})`);
+  const brandLabel = p.brand === 'lenovo' ? 'Lenovo' : 'HP';
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
 
   document.getElementById('modalBody').innerHTML = `
     <h2>${p.name}</h2>
@@ -395,7 +328,7 @@ function openModal(id) {
     <table>
       ${Object.entries(p.fullSpecs).map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
     </table>
-    <div class="product-card__price" style="margin-bottom:1rem"><span>desde </span>${formatPrice(p.price)}</div>
+    <div class="product-card__price" style="margin-bottom:1rem"><span>Precio </span>a consultar</div>
     <a href="https://wa.me/5491100000000?text=${waMsg}" target="_blank" rel="noopener" class="btn btn--whatsapp">Consultar por WhatsApp</a>
   `;
 
@@ -410,57 +343,48 @@ function closeModal() {
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
-  // Brand tabs
   document.querySelectorAll('.brand-tab').forEach(btn => {
     btn.addEventListener('click', () => selectBrand(btn.dataset.brand));
   });
 
-  // Category chips
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       currentCategory = chip.dataset.category;
       document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c === chip));
       document.getElementById('filterCategory').value = currentCategory === 'all' ? 'all' : currentCategory;
+      updateBrandHeroForCategory();
       renderProducts();
     });
   });
 
-  // Filters
   document.getElementById('filterSearch').addEventListener('input', renderProducts);
   document.getElementById('filterCategory').addEventListener('change', (e) => {
     currentCategory = e.target.value;
     document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === currentCategory));
+    updateBrandHeroForCategory();
     renderProducts();
   });
-  document.getElementById('filterPriceMin').addEventListener('input', renderProducts);
-  document.getElementById('filterPriceMax').addEventListener('input', renderProducts);
   document.getElementById('filterSort').addEventListener('change', renderProducts);
 
-  // Clear filters
   document.getElementById('filterClear').addEventListener('click', () => {
     document.getElementById('filterSearch').value = '';
     document.getElementById('filterCategory').value = 'all';
-    document.getElementById('filterPriceMin').value = '';
-    document.getElementById('filterPriceMax').value = '';
     document.getElementById('filterSort').value = 'recommended';
     currentCategory = 'all';
     document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
     renderProducts();
   });
 
-  // Modal
   document.getElementById('modalClose').addEventListener('click', closeModal);
   document.getElementById('modalOverlay').addEventListener('click', (e) => {
     if (e.target === e.currentTarget) closeModal();
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-  // Mobile menu
   document.getElementById('menuToggle').addEventListener('click', () => {
     document.getElementById('mainNav').classList.toggle('open');
   });
 
-  // Contact form (sin backend)
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     document.getElementById('contactSuccess').style.display = 'block';
@@ -468,6 +392,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { document.getElementById('contactSuccess').style.display = 'none'; }, 5000);
   });
 
-  // Render inicial
   renderProducts();
 });

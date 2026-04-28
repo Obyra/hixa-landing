@@ -127,24 +127,35 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 }
 
 .header__inner {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem 1rem;
   gap: 1.5rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  z-index: 2;
 }
 
 .header__logo img {
   display: block;
   object-fit: contain;
-  height: 56px;
+  height: 88px;
   width: auto;
 }
 
 .header__nav {
   display: flex;
   gap: 2rem;
-  margin-left: auto;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header__nav a {
@@ -169,10 +180,10 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 .header__nav a:hover::after { width: 100%; }
 
 .header__wa {
-  margin-left: 1rem;
   padding: .6rem 1.5rem;
   font-size: .9rem;
   border-radius: 50px;
+  z-index: 2;
 }
 
 .header__hamburger {
@@ -783,6 +794,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
     top: 100%;
     left: 0;
     right: 0;
+    transform: none;
     background: var(--white);
     border-bottom: 1px solid var(--gray-200);
     padding: 1rem;
@@ -791,7 +803,8 @@ h3 { font-size: 1.125rem; font-weight: 600; }
   }
   .header__nav.open { display: flex; }
   .header__hamburger { display: flex; }
-  .header__wa { margin-left: 0; font-size: .78rem; padding: .4rem .8rem; }
+  .header__wa { font-size: .78rem; padding: .4rem .8rem; }
+  .header__logo img { height: 64px; }
 
   .brand-hero h1 { font-size: 1.5rem; }
 
