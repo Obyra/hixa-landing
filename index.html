@@ -10,6 +10,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo-hixa.jpeg">
   <link rel="icon" type="image/jpeg" href="assets/logo-hixa.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,8 +31,11 @@
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#" class="header__logo">
-        <img src="assets/logo-hixa.jpeg" alt="HIXA Solutions" width="180" height="72">
+      <a href="#" class="header__logo" aria-label="HIXA Solutions">
+        <span class="logo-mark">
+          <span class="logo-mark__name">HIXA</span>
+          <span class="logo-mark__sub">solutions</span>
+        </span>
       </a>
       <button class="header__hamburger" id="menuToggle" aria-label="Abrir menú">
         <span></span><span></span><span></span>
