@@ -1,22 +1,24 @@
 /* ============================================
    HIXA Solutions — Estilos
-   Paleta extraída del logo: salmón/coral + gris
+   Paleta oficial: Manual de Identidad Visual HIXA
    ============================================ */
 
 :root {
-  --primary: #E8898B;
-  --primary-dark: #D4696B;
-  --primary-light: #F5C4C5;
-  --secondary: #1E293B;
-  --secondary-light: #475569;
-  --gray-50: #F8FAFC;
-  --gray-100: #F1F5F9;
-  --gray-200: #E2E8F0;
-  --gray-300: #CBD5E1;
-  --gray-400: #94A3B8;
-  --gray-500: #64748B;
-  --gray-600: #475569;
+  --primary: #E6007E;
+  --primary-dark: #B8005F;
+  --primary-light: #FBD3E8;
+  --secondary: #061A2E;
+  --secondary-light: #47607A;
+  --gray-50: #F5F8FA;
+  --gray-100: #DCE3EA;
+  --gray-200: #C3CDD6;
+  --gray-300: #A3B0BC;
+  --gray-400: #7C8B99;
+  --gray-500: #556877;
+  --gray-600: #47607A;
   --white: #FFFFFF;
+  --font-heading: 'Unbounded', -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Space Grotesk', -apple-system, 'Segoe UI', sans-serif;
   --success: #22C55E;
   --whatsapp: #25D366;
   --radius: 8px;
@@ -32,11 +34,15 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-body);
   color: var(--secondary);
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .logo-mark {
+  font-family: var(--font-heading);
 }
 
 .container {
@@ -52,12 +58,12 @@ a:hover { color: var(--primary); }
 
 h2 {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-h3 { font-size: 1.125rem; font-weight: 600; }
+h3 { font-size: 1.125rem; font-weight: 500; }
 
 /* ---- Buttons ---- */
 
@@ -83,16 +89,16 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 
 .btn--outline {
   background: transparent;
-  color: var(--secondary-light);
-  border: 1px solid var(--gray-300);
+  color: var(--primary);
+  border: 1px solid var(--primary);
 }
-.btn--outline:hover { border-color: var(--primary); color: var(--primary); }
+.btn--outline:hover { background: var(--primary); color: var(--white); }
 
 .btn--whatsapp {
-  background: var(--whatsapp);
+  background: var(--primary);
   color: var(--white);
 }
-.btn--whatsapp:hover { background: #1EBE5A; color: var(--white); }
+.btn--whatsapp:hover { background: var(--primary-dark); color: var(--white); }
 
 .btn--sm { padding: .4rem .9rem; font-size: .8rem; }
 
@@ -144,7 +150,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 .header__logo { text-decoration: none; }
 
 .logo-mark {
-  font-family: 'Montserrat', -apple-system, 'Segoe UI', sans-serif;
+  font-family: var(--font-heading);
   display: inline-flex;
   flex-direction: column;
   align-items: flex-end;
@@ -152,7 +158,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 }
 
 .logo-mark__name {
-  font-weight: 800;
+  font-weight: 500;
   font-size: 2.6rem;
   letter-spacing: .04em;
   color: var(--primary);
@@ -228,7 +234,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 /* ---- Brand Tabs ---- */
 
 .brand-tabs {
-  background: var(--gray-50);
+  background: var(--gray-100);
   border-bottom: 1px solid var(--gray-200);
   padding: 1rem 0 0;
 }
@@ -266,7 +272,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 
 .brand-hero h1 {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 500;
   margin-bottom: .5rem;
 }
 
@@ -340,7 +346,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 
 .products {
   padding: 2rem 0 3rem;
-  background: var(--gray-50);
+  background: var(--gray-100);
   min-height: 400px;
 }
 
@@ -510,7 +516,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 
 .services {
   padding: 3.5rem 0;
-  background: var(--gray-50);
+  background: var(--gray-100);
 }
 
 .services__subtitle {
@@ -601,7 +607,7 @@ h3 { font-size: 1.125rem; font-weight: 600; }
 
 .contact {
   padding: 3.5rem 0;
-  background: var(--gray-50);
+  background: var(--gray-100);
 }
 
 .contact__grid {
