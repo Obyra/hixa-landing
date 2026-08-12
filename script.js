@@ -1,6 +1,6 @@
 /* ============================================
    HIXA Solutions — Script principal
-   Catálogo real Dell + HP
+   Catálogo real Dell
    ============================================ */
 
 const products = [
@@ -143,48 +143,10 @@ const products = [
     shortSpecs: ['Kit inalámbrico teclado + mouse', 'Español (QWERTY)', 'Conexión USB wireless'],
     fullSpecs: { Tipo: 'Kit teclado y mouse inalámbrico', Conectividad: 'USB Wireless', Idioma: 'Español (QWERTY)', Garantía: '1 año' },
     imagePath: 'assets/brands/dell/Teclado y ratón Dell - KM3322W - español (QWERTY).avif'
-  },
-
-  // ── HP SERVIDORES ──
-  {
-    id: 22, brand: 'hp', name: 'HP ProLiant ML110 G11 (2x4TB HDD)',
-    category: 'Servidores', badges: ['stock'],
-    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x4 TB HDD'],
-    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 4 TB HDD', Fuente: 'HP 500W Flex Slot Platinum', 'Factor de forma': 'Torre' },
-    imagePath: 'assets/brands/hp/hp-proliant-ml110-g11-2x4tb-hdd.png'
-  },
-  {
-    id: 23, brand: 'hp', name: 'HP ProLiant DL20 G11',
-    category: 'Servidores', badges: ['stock'],
-    shortSpecs: ['Intel Xeon E-2434', '32 GB RAM', '2x480 GB SSD'],
-    fullSpecs: { Procesador: 'Intel® Xeon® E-2434', RAM: '32 GB', Almacenamiento: '2 x 480 GB SSD', 'Factor de forma': 'Rack 1U' },
-    imagePath: 'assets/brands/hp/hp-dl20-g11.png'
-  },
-  {
-    id: 24, brand: 'hp', name: 'HP ProLiant DL320 G11',
-    category: 'Servidores', badges: ['stock'],
-    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x960 GB SSD'],
-    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 960 GB SSD', Fuente: 'HP 800W Flex Slot Platinum', 'Factor de forma': 'Rack 1U' },
-    imagePath: 'assets/brands/hp/hp-dl320-g11.png'
-  },
-  {
-    id: 25, brand: 'hp', name: 'HP ProLiant DL360 G11',
-    category: 'Servidores', badges: ['new', 'stock'],
-    shortSpecs: ['Intel Xeon Silver 4514Y', '64 GB RAM (2x32GB)', '2x480 GB SSD'],
-    fullSpecs: { Procesador: 'Intel® Xeon® Silver 4514Y', RAM: '64 GB (2 x 32 GB)', Almacenamiento: '2 x 480 GB SSD', Fuente: '2 x 800W (redundante)', 'Factor de forma': 'Rack 1U' },
-    imagePath: 'assets/brands/hp/hp-proliant-dl360-g11.png'
-  },
-  {
-    id: 26, brand: 'hp', name: 'HP ProLiant ML110 G11 (2x960 SSD)',
-    category: 'Servidores', badges: ['stock'],
-    shortSpecs: ['Intel Xeon 3508U', '32 GB RAM', '2x960 GB SATA SSD'],
-    fullSpecs: { Procesador: 'Intel® Xeon® 3508U', RAM: '32 GB', Almacenamiento: '2 x 960 GB HP SATA 6G SSD', 'Factor de forma': 'Torre' },
-    imagePath: 'assets/brands/hp/hp-proliant-ml110-g11-2x960-ssd.png'
   }
 ];
 
 // ---- Estado ----
-let currentBrand = 'dell';
 let currentCategory = 'all';
 
 // ---- Placeholder SVG ----
@@ -209,8 +171,7 @@ function badgeHTML(badge) {
 
 // ---- Render de tarjeta ----
 function cardHTML(p) {
-  const brandLabel = p.brand === 'dell' ? 'Dell' : 'HP';
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (Dell)`);
   return `
     <article class="product-card" data-id="${p.id}">
       <div class="product-card__img">
@@ -238,12 +199,7 @@ function renderProducts() {
   const category = document.getElementById('filterCategory').value;
   const sort = document.getElementById('filterSort').value;
 
-  // Si el usuario filtra por "Servidores" mostramos todos (Dell + HP) ignorando la marca
-  const effectiveCategory = category !== 'all' ? category : currentCategory;
-  const showAllBrands = effectiveCategory === 'Servidores';
-
   let filtered = products.filter(p => {
-    if (!showAllBrands && p.brand !== currentBrand) return false;
     if (currentCategory !== 'all' && p.category !== currentCategory) return false;
     if (category !== 'all' && p.category !== category) return false;
     if (search && !p.name.toLowerCase().includes(search) && !p.shortSpecs.some(s => s.toLowerCase().includes(search))) return false;
@@ -262,52 +218,12 @@ function renderProducts() {
   count.textContent = `${filtered.length} producto${filtered.length !== 1 ? 's' : ''}`;
 }
 
-// ---- Cambia el hero cuando se filtra por "Servidores" (que muestra todas las marcas) ----
-function updateBrandHeroForCategory() {
-  const titleEl = document.getElementById('brandTitle');
-  const subEl = document.getElementById('brandSubtitle');
-  if (currentCategory === 'Servidores') {
-    titleEl.textContent = 'Servidores en HIXA';
-    subEl.textContent = 'Servidores HP ProLiant para empresas, con garantía oficial.';
-  } else {
-    const brandName = currentBrand === 'dell' ? 'Dell' : 'HP';
-    const subtitle = currentBrand === 'dell'
-      ? 'Notebooks Dell Pro, equipos de escritorio, monitores y accesorios con garantía oficial.'
-      : 'Servidores HP ProLiant para empresas: alto rendimiento, confiabilidad y soporte oficial.';
-    titleEl.textContent = `${brandName} en HIXA`;
-    subEl.textContent = subtitle;
-  }
-}
-
-// ---- Selección de marca ----
-function selectBrand(brand) {
-  currentBrand = brand;
-  currentCategory = 'all';
-
-  document.querySelectorAll('.brand-tab').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.brand === brand);
-  });
-
-  const brandName = brand === 'dell' ? 'Dell' : 'HP';
-  const subtitle = brand === 'dell'
-    ? 'Notebooks Dell Pro, equipos de escritorio, monitores y accesorios con garantía oficial.'
-    : 'Servidores HP ProLiant para empresas: alto rendimiento, confiabilidad y soporte oficial.';
-  document.getElementById('brandTitle').textContent = `${brandName} en HIXA`;
-  document.getElementById('brandSubtitle').textContent = subtitle;
-
-  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
-  document.getElementById('filterCategory').value = 'all';
-
-  renderProducts();
-}
-
 // ---- Modal ----
 function openModal(id) {
   const p = products.find(pr => pr.id === id);
   if (!p) return;
 
-  const brandLabel = p.brand === 'dell' ? 'Dell' : 'HP';
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (Dell)`);
 
   document.getElementById('modalBody').innerHTML = `
     <h2>${p.name}</h2>
@@ -333,16 +249,11 @@ function closeModal() {
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.brand-tab').forEach(btn => {
-    btn.addEventListener('click', () => selectBrand(btn.dataset.brand));
-  });
-
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       currentCategory = chip.dataset.category;
       document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c === chip));
       document.getElementById('filterCategory').value = currentCategory === 'all' ? 'all' : currentCategory;
-      updateBrandHeroForCategory();
       renderProducts();
     });
   });
@@ -351,7 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('filterCategory').addEventListener('change', (e) => {
     currentCategory = e.target.value;
     document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === currentCategory));
-    updateBrandHeroForCategory();
     renderProducts();
   });
   document.getElementById('filterSort').addEventListener('change', renderProducts);
