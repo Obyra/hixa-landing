@@ -1,6 +1,6 @@
 /* ============================================
    HIXA Solutions — Script principal
-   Catálogo real Dell
+   Catálogo real Dell + Lenovo
    ============================================ */
 
 const products = [
@@ -143,10 +143,162 @@ const products = [
     shortSpecs: ['Kit inalámbrico teclado + mouse', 'Español (QWERTY)', 'Conexión USB wireless'],
     fullSpecs: { Tipo: 'Kit teclado y mouse inalámbrico', Conectividad: 'USB Wireless', Idioma: 'Español (QWERTY)', Garantía: '1 año' },
     imagePath: 'assets/brands/dell/Teclado y ratón Dell - KM3322W - español (QWERTY).avif'
+  },
+
+  // ── LENOVO NOTEBOOKS ──
+  {
+    id: 20, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15AMN8',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5 7520U', '16 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5 7520U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" Full HD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ip-slim-3-15amn8.png'
+  },
+  {
+    id: 21, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10 (i5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ip-slim-3-15irh10.png'
+  },
+  {
+    id: 22, brand: 'lenovo', name: 'Lenovo IdeaPad 1 15IJL7',
+    category: 'Notebooks', badges: ['stock', 'offer'],
+    shortSpecs: ['Intel Celeron N4500', '4 GB RAM', '128 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Celeron® N4500', RAM: '4 GB', Almacenamiento: '128 GB SSD', Pantalla: '15.6" HD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-1-15ijl7.png'
+  },
+  {
+    id: 23, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IAH8 Táctil',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-12450H', '8 GB RAM', '15.6" FHD Táctil'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-12450H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" FHD Táctil', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15iah8-tactil.png'
+  },
+  {
+    id: 24, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10 Touch',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '15.3" WUXGA Touch'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA Touch', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15irh10-touch.png'
+  },
+  {
+    id: 25, brand: 'lenovo', name: 'Lenovo IdeaPad Slim 3 15IRH10',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i5-13420H', '8 GB RAM', '15.3" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-13420H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.3" WUXGA', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-ideapad-slim-3-15irh10.png'
+  },
+  {
+    id: 26, brand: 'lenovo', name: 'Lenovo LOQ 15IAX9E (Gaming)',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core i5-12450HX', 'NVIDIA RTX 3050 6 GB', '15.6" FHD 144 Hz'],
+    fullSpecs: { Procesador: 'Intel® Core™ i5-12450HX', RAM: '8 GB', Almacenamiento: '512 GB SSD', GPU: 'NVIDIA® GeForce RTX™ 3050 6 GB GDDR6', Pantalla: '15.6" Full HD 144 Hz', 'Sistema operativo': 'Free DOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-loq-15iax9e-rtx3050.png'
+  },
+  {
+    id: 27, brand: 'lenovo', name: 'Lenovo T14 (AMD Ryzen 5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-7540U', '16 GB RAM', 'Windows 11 Pro'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-7540U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" FHD', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-t14-ryzen5-7540u.png'
+  },
+  {
+    id: 28, brand: 'lenovo', name: 'Lenovo ThinkBook 14 G8',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core 7 240H', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 7 240H', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-14-g8-core7.png'
+  },
+  {
+    id: 29, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 IRL',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core 7 240H', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 7 240H', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-irl-core7.png'
+  },
+  {
+    id: 30, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 (Win 11 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core 5 210H', '8 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ 5 210H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-core5-w11pro.png'
+  },
+  {
+    id: 31, brand: 'lenovo', name: 'Lenovo ThinkBook 16 G8 (FreeDOS)',
+    category: 'Notebooks', badges: ['stock', 'offer'],
+    shortSpecs: ['Intel Core 5 210H', '8 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ 5 210H', RAM: '8 GB', Almacenamiento: '512 GB SSD', 'Sistema operativo': 'FreeDOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkbook-16-g8-core5-freedos.png'
+  },
+  {
+    id: 32, brand: 'lenovo', name: 'Lenovo ThinkPad T14 G6 (Ultra 7)',
+    category: 'Notebooks', badges: ['new', 'stock'],
+    shortSpecs: ['Intel Core Ultra 7 255U', '16 GB RAM', '3 años de garantía'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 7 255U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11 Pro', Garantía: '3 años' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-g6-ultra7.png'
+  },
+  {
+    id: 33, brand: 'lenovo', name: 'Lenovo ThinkPad T16 G4 (Ultra 5)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core Ultra 5 225U', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 5 225U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t16-g4-ultra5.png'
+  },
+  {
+    id: 34, brand: 'lenovo', name: 'Lenovo ThinkPad T16 G4 (Ultra 7)',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core Ultra 7 255U', '16 GB RAM', '16" WUXGA'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 7 255U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '16" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t16-g4-ultra7.png'
+  },
+  {
+    id: 35, brand: 'lenovo', name: 'Lenovo ThinkPad T14 (Ryzen 5, Win 11)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-6650U', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-6650U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-ryzen5-6650u.png'
+  },
+  {
+    id: 36, brand: 'lenovo', name: 'Lenovo ThinkPad T14 (Ryzen 5, Win 11 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 5-6650U', '16 GB RAM', '14" WUXGA'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 5-6650U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '14" WUXGA', 'Sistema operativo': 'Windows 11 Pro' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-t14-ryzen5-6650u-pro.png'
+  },
+  {
+    id: 37, brand: 'lenovo', name: 'Lenovo ThinkPad X13 (Ryzen 7 Pro)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['AMD Ryzen 7 Pro 5850U', '16 GB RAM', '3 años de garantía'],
+    fullSpecs: { Procesador: 'AMD Ryzen™ 7 Pro 5850U', RAM: '16 GB', Almacenamiento: '512 GB SSD', Pantalla: '13.3" FHD', 'Sistema operativo': 'Windows 11 Pro', Garantía: '3 años' },
+    imagePath: 'assets/brands/lenovo/lenovo-thinkpad-x13-ryzen7-pro.png'
+  },
+  {
+    id: 38, brand: 'lenovo', name: 'Lenovo V15 G4 (i7)',
+    category: 'Notebooks', badges: ['stock'],
+    shortSpecs: ['Intel Core i7-13620H', '8 GB RAM', '15.6" Full HD'],
+    fullSpecs: { Procesador: 'Intel® Core™ i7-13620H', RAM: '8 GB', Almacenamiento: '512 GB SSD', Pantalla: '15.6" Full HD', 'Sistema operativo': 'Free DOS' },
+    imagePath: 'assets/brands/lenovo/lenovo-v15-g4-i7.png'
+  },
+  {
+    id: 39, brand: 'lenovo', name: 'Lenovo Yoga Slim 7',
+    category: 'Notebooks', badges: ['new'],
+    shortSpecs: ['Intel Core Ultra 5 125H', '16 GB RAM', '512 GB SSD'],
+    fullSpecs: { Procesador: 'Intel® Core™ Ultra 5 125H', RAM: '16 GB', Almacenamiento: '512 GB SSD', 'Sistema operativo': 'Windows 11 Home' },
+    imagePath: 'assets/brands/lenovo/lenovo-yoga-slim-7-ultra5.png'
+  },
+
+  // ── LENOVO SERVIDORES ──
+  {
+    id: 40, brand: 'lenovo', name: 'Lenovo ThinkSystem SR630 V4',
+    category: 'Servidores', badges: ['new'],
+    shortSpecs: ['Intel Xeon 6505P 12C 2.2 GHz', '32 GB TruDDR5 6400 MHz', 'RAID 940-8i 4 GB Flash'],
+    fullSpecs: { Procesador: 'Intel Xeon 6505P 12C 150W 2.2 GHz', RAM: 'ThinkSystem 32 GB TruDDR5 6400 MHz', Almacenamiento: 'ThinkSystem RAID 940-8i 4 GB Flash PCIe Gen4', 'Factor de forma': 'Rack 1U' },
+    imagePath: 'assets/brands/lenovo/lenovo-sr630-v4.png'
   }
 ];
 
 // ---- Estado ----
+let currentBrand = 'dell';
 let currentCategory = 'all';
 
 // ---- Placeholder SVG ----
@@ -171,7 +323,8 @@ function badgeHTML(badge) {
 
 // ---- Render de tarjeta ----
 function cardHTML(p) {
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (Dell)`);
+  const brandLabel = p.brand === 'dell' ? 'Dell' : 'Lenovo';
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
   return `
     <article class="product-card" data-id="${p.id}">
       <div class="product-card__img">
@@ -199,7 +352,12 @@ function renderProducts() {
   const category = document.getElementById('filterCategory').value;
   const sort = document.getElementById('filterSort').value;
 
+  // Si el usuario filtra por "Servidores" mostramos todas las marcas ignorando la marca activa
+  const effectiveCategory = category !== 'all' ? category : currentCategory;
+  const showAllBrands = effectiveCategory === 'Servidores';
+
   let filtered = products.filter(p => {
+    if (!showAllBrands && p.brand !== currentBrand) return false;
     if (currentCategory !== 'all' && p.category !== currentCategory) return false;
     if (category !== 'all' && p.category !== category) return false;
     if (search && !p.name.toLowerCase().includes(search) && !p.shortSpecs.some(s => s.toLowerCase().includes(search))) return false;
@@ -218,12 +376,52 @@ function renderProducts() {
   count.textContent = `${filtered.length} producto${filtered.length !== 1 ? 's' : ''}`;
 }
 
+// ---- Cambia el hero cuando se filtra por "Servidores" (que muestra todas las marcas) ----
+function updateBrandHeroForCategory() {
+  const titleEl = document.getElementById('brandTitle');
+  const subEl = document.getElementById('brandSubtitle');
+  if (currentCategory === 'Servidores') {
+    titleEl.textContent = 'Servidores en HIXA';
+    subEl.textContent = 'Servidores Lenovo ThinkSystem para empresas, con garantía oficial.';
+  } else {
+    const brandName = currentBrand === 'dell' ? 'Dell' : 'Lenovo';
+    const subtitle = currentBrand === 'dell'
+      ? 'Notebooks Dell Pro, equipos de escritorio, monitores y accesorios con garantía oficial.'
+      : 'Notebooks ThinkPad, ThinkBook, IdeaPad, Yoga y servidores ThinkSystem con garantía oficial.';
+    titleEl.textContent = `${brandName} en HIXA`;
+    subEl.textContent = subtitle;
+  }
+}
+
+// ---- Selección de marca ----
+function selectBrand(brand) {
+  currentBrand = brand;
+  currentCategory = 'all';
+
+  document.querySelectorAll('.brand-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.brand === brand);
+  });
+
+  const brandName = brand === 'dell' ? 'Dell' : 'Lenovo';
+  const subtitle = brand === 'dell'
+    ? 'Notebooks Dell Pro, equipos de escritorio, monitores y accesorios con garantía oficial.'
+    : 'Notebooks ThinkPad, ThinkBook, IdeaPad, Yoga y servidores ThinkSystem con garantía oficial.';
+  document.getElementById('brandTitle').textContent = `${brandName} en HIXA`;
+  document.getElementById('brandSubtitle').textContent = subtitle;
+
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === 'all'));
+  document.getElementById('filterCategory').value = 'all';
+
+  renderProducts();
+}
+
 // ---- Modal ----
 function openModal(id) {
   const p = products.find(pr => pr.id === id);
   if (!p) return;
 
-  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (Dell)`);
+  const brandLabel = p.brand === 'dell' ? 'Dell' : 'Lenovo';
+  const waMsg = encodeURIComponent(`Hola! Quiero consultar por ${p.name} (${brandLabel})`);
 
   document.getElementById('modalBody').innerHTML = `
     <h2>${p.name}</h2>
@@ -249,11 +447,16 @@ function closeModal() {
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.brand-tab').forEach(btn => {
+    btn.addEventListener('click', () => selectBrand(btn.dataset.brand));
+  });
+
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       currentCategory = chip.dataset.category;
       document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c === chip));
       document.getElementById('filterCategory').value = currentCategory === 'all' ? 'all' : currentCategory;
+      updateBrandHeroForCategory();
       renderProducts();
     });
   });
@@ -262,6 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('filterCategory').addEventListener('change', (e) => {
     currentCategory = e.target.value;
     document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.category === currentCategory));
+    updateBrandHeroForCategory();
     renderProducts();
   });
   document.getElementById('filterSort').addEventListener('change', renderProducts);
